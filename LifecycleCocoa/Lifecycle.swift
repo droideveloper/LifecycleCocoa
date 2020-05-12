@@ -8,12 +8,15 @@
 
 import Foundation
 
-public enum Lifecycle: Int {
-  case viewInit // for sanity check
-  case viewDidLoad // create
-  case viewWillAppear // start
-  case viewDidAppear // resume
-  case viewWilDisappear // pause
-  case viewDidDisappear // stop
-  case viewDidUnload // destroy
+public enum Lifecycle: Int, Comparable {
+  case viewInit// for sanity check
+  case viewDidLoad// create
+  case viewWillAppear// start
+  case viewDidAppear// resume
+  case viewWilDisappear// pause
+  case viewDidDisappear// stop
+  
+  public static func < (lhs: Lifecycle, rhs: Lifecycle) -> Bool {
+    return lhs.rawValue < rhs.rawValue
+  }
 }

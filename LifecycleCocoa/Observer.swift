@@ -8,17 +8,9 @@
 
 import Foundation
 
-open class Observer<D>: Hashable where D: Equatable {
+open class Observer<D>: NSObject where D: Equatable {
   
   open func onChange(_ newValue: D) {
     // no opt
-  }
-  
-  public func hash(into hasher: inout Hasher) {
-    
-  }
-  
-  public static func ==(lhs: Observer<D>, rhs: Observer<D>) -> Bool {
-    return false
   }
 }
