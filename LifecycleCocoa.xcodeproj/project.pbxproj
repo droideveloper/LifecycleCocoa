@@ -20,6 +20,7 @@
 		3D72EF73246AFA1F000D3C0D /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF72246AFA1F000D3C0D /* Lock.swift */; };
 		3D72EF75246AFA42000D3C0D /* SpinLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF74246AFA42000D3C0D /* SpinLock.swift */; };
 		3D72EF77246AFBAB000D3C0D /* CallbackObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */; };
+		3D72EF79246B0283000D3C0D /* MutableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF78246B0283000D3C0D /* MutableValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3D72EF72246AFA1F000D3C0D /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
 		3D72EF74246AFA42000D3C0D /* SpinLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinLock.swift; sourceTree = "<group>"; };
 		3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackObserver.swift; sourceTree = "<group>"; };
+		3D72EF78246B0283000D3C0D /* MutableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				3D72EF6B246AF584000D3C0D /* Lifecycle.swift */,
 				3D72EF6D246AF671000D3C0D /* BaseUIViewController.swift */,
 				3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */,
+				3D72EF78246B0283000D3C0D /* MutableValue.swift */,
 			);
 			path = LifecycleCocoa;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				3D72EF68246AF4AF000D3C0D /* Observer.swift in Sources */,
 				3D72EF6A246AF56B000D3C0D /* LifecycleOwner.swift in Sources */,
 				3D72EF77246AFBAB000D3C0D /* CallbackObserver.swift in Sources */,
+				3D72EF79246B0283000D3C0D /* MutableValue.swift in Sources */,
 				3D72EF6E246AF671000D3C0D /* BaseUIViewController.swift in Sources */,
 				3D72EF71246AF9EF000D3C0D /* AtomicValue.swift in Sources */,
 				3D72EF6C246AF584000D3C0D /* Lifecycle.swift in Sources */,
