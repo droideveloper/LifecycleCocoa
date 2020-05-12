@@ -11,14 +11,21 @@ import Foundation
 class Value<D> where D: Equatable {
   
   private var cache = Dictionary<Observer<D>, LifecycleOwner>()
+  private let lock = SpinLock()
   
-  private var value: D?
+  private var value: D
   
-  init(_ value: D? = nil) {
-    self.value = value
+  init(_ defaultValue: D) {
+    self.value = defaultValue
   }
     
-  func observe(_ lifecycleOwner: LifecycleOwner) {
-    
+  func observe(_ lifecycleOwner: LifecycleOwner, observer: Observer<D>) {
+    lock.hold()
+    cache[observer] = lifecycleOwner
+    lock.release()
+  }
+  
+  func observe(_ lifecycleOwner: LifecycleOwner,_ observer: @escaping (D) -> Void) {
+    observe(lifecycleOwner, observer: CallbackObserver.wrap(callback: observer))
   }
 }

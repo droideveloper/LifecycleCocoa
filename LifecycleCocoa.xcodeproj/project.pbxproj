@@ -16,6 +16,10 @@
 		3D72EF6A246AF56B000D3C0D /* LifecycleOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF69246AF56B000D3C0D /* LifecycleOwner.swift */; };
 		3D72EF6C246AF584000D3C0D /* Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF6B246AF584000D3C0D /* Lifecycle.swift */; };
 		3D72EF6E246AF671000D3C0D /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF6D246AF671000D3C0D /* BaseUIViewController.swift */; };
+		3D72EF71246AF9EF000D3C0D /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF70246AF9EF000D3C0D /* AtomicValue.swift */; };
+		3D72EF73246AFA1F000D3C0D /* Lock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF72246AFA1F000D3C0D /* Lock.swift */; };
+		3D72EF75246AFA42000D3C0D /* SpinLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF74246AFA42000D3C0D /* SpinLock.swift */; };
+		3D72EF77246AFBAB000D3C0D /* CallbackObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +45,10 @@
 		3D72EF69246AF56B000D3C0D /* LifecycleOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleOwner.swift; sourceTree = "<group>"; };
 		3D72EF6B246AF584000D3C0D /* Lifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lifecycle.swift; sourceTree = "<group>"; };
 		3D72EF6D246AF671000D3C0D /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		3D72EF70246AF9EF000D3C0D /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		3D72EF72246AFA1F000D3C0D /* Lock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lock.swift; sourceTree = "<group>"; };
+		3D72EF74246AFA42000D3C0D /* SpinLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinLock.swift; sourceTree = "<group>"; };
+		3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackObserver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		3D72EF49246AF365000D3C0D /* LifecycleCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				3D72EF6F246AF9DB000D3C0D /* Common */,
 				3D72EF4A246AF365000D3C0D /* LifecycleCocoa.h */,
 				3D72EF4B246AF365000D3C0D /* Info.plist */,
 				3D72EF61246AF396000D3C0D /* UIViewController+Lifecycle.swift */,
@@ -91,6 +100,7 @@
 				3D72EF69246AF56B000D3C0D /* LifecycleOwner.swift */,
 				3D72EF6B246AF584000D3C0D /* Lifecycle.swift */,
 				3D72EF6D246AF671000D3C0D /* BaseUIViewController.swift */,
+				3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */,
 			);
 			path = LifecycleCocoa;
 			sourceTree = "<group>";
@@ -102,6 +112,16 @@
 				3D72EF57246AF365000D3C0D /* Info.plist */,
 			);
 			path = LifecycleCocoaTests;
+			sourceTree = "<group>";
+		};
+		3D72EF6F246AF9DB000D3C0D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3D72EF70246AF9EF000D3C0D /* AtomicValue.swift */,
+				3D72EF72246AFA1F000D3C0D /* Lock.swift */,
+				3D72EF74246AFA42000D3C0D /* SpinLock.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,11 +234,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D72EF75246AFA42000D3C0D /* SpinLock.swift in Sources */,
 				3D72EF62246AF396000D3C0D /* UIViewController+Lifecycle.swift in Sources */,
 				3D72EF68246AF4AF000D3C0D /* Observer.swift in Sources */,
 				3D72EF6A246AF56B000D3C0D /* LifecycleOwner.swift in Sources */,
+				3D72EF77246AFBAB000D3C0D /* CallbackObserver.swift in Sources */,
 				3D72EF6E246AF671000D3C0D /* BaseUIViewController.swift in Sources */,
+				3D72EF71246AF9EF000D3C0D /* AtomicValue.swift in Sources */,
 				3D72EF6C246AF584000D3C0D /* Lifecycle.swift in Sources */,
+				3D72EF73246AFA1F000D3C0D /* Lock.swift in Sources */,
 				3D72EF66246AF430000D3C0D /* Value.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

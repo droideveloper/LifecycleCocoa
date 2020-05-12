@@ -1,5 +1,5 @@
 //
-//  BaseUIViewController.swift
+//  Lock.swift
 //  LifecycleCocoa
 //
 //  Created by Fatih Sen on 12.05.2020.
@@ -7,11 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-open class BaseUIViewController: UIViewController {
-  
-  var lifecycle: Lifecycle = .viewInit
-  
-  
+protocol Lock {
+  func hold()
+  func release()
 }
