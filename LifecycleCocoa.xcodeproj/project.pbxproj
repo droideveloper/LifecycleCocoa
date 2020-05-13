@@ -10,7 +10,6 @@
 		3D72EF51246AF365000D3C0D /* LifecycleCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72EF47246AF365000D3C0D /* LifecycleCocoa.framework */; };
 		3D72EF56246AF365000D3C0D /* LifecycleCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF55246AF365000D3C0D /* LifecycleCocoaTests.swift */; };
 		3D72EF58246AF365000D3C0D /* LifecycleCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D72EF4A246AF365000D3C0D /* LifecycleCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D72EF62246AF396000D3C0D /* UIViewController+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF61246AF396000D3C0D /* UIViewController+Lifecycle.swift */; };
 		3D72EF66246AF430000D3C0D /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF65246AF430000D3C0D /* Value.swift */; };
 		3D72EF68246AF4AF000D3C0D /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF67246AF4AF000D3C0D /* Observer.swift */; };
 		3D72EF6A246AF56B000D3C0D /* LifecycleOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF69246AF56B000D3C0D /* LifecycleOwner.swift */; };
@@ -21,6 +20,7 @@
 		3D72EF75246AFA42000D3C0D /* SpinLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF74246AFA42000D3C0D /* SpinLock.swift */; };
 		3D72EF77246AFBAB000D3C0D /* CallbackObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */; };
 		3D72EF79246B0283000D3C0D /* MutableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72EF78246B0283000D3C0D /* MutableValue.swift */; };
+		3D9CFFFE246C45A3000DDC78 /* BaseUIViewController+Lifecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D9CFFFD246C45A3000DDC78 /* BaseUIViewController+Lifecycle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		3D72EF50246AF365000D3C0D /* LifecycleCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifecycleCocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D72EF55246AF365000D3C0D /* LifecycleCocoaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleCocoaTests.swift; sourceTree = "<group>"; };
 		3D72EF57246AF365000D3C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D72EF61246AF396000D3C0D /* UIViewController+Lifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Lifecycle.swift"; sourceTree = "<group>"; };
 		3D72EF65246AF430000D3C0D /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
 		3D72EF67246AF4AF000D3C0D /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 		3D72EF69246AF56B000D3C0D /* LifecycleOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleOwner.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		3D72EF74246AFA42000D3C0D /* SpinLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinLock.swift; sourceTree = "<group>"; };
 		3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackObserver.swift; sourceTree = "<group>"; };
 		3D72EF78246B0283000D3C0D /* MutableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableValue.swift; sourceTree = "<group>"; };
+		3D9CFFFD246C45A3000DDC78 /* BaseUIViewController+Lifecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseUIViewController+Lifecycle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,6 @@
 				3D72EF6F246AF9DB000D3C0D /* Common */,
 				3D72EF4A246AF365000D3C0D /* LifecycleCocoa.h */,
 				3D72EF4B246AF365000D3C0D /* Info.plist */,
-				3D72EF61246AF396000D3C0D /* UIViewController+Lifecycle.swift */,
 				3D72EF65246AF430000D3C0D /* Value.swift */,
 				3D72EF67246AF4AF000D3C0D /* Observer.swift */,
 				3D72EF69246AF56B000D3C0D /* LifecycleOwner.swift */,
@@ -104,6 +103,7 @@
 				3D72EF6D246AF671000D3C0D /* BaseUIViewController.swift */,
 				3D72EF76246AFBAB000D3C0D /* CallbackObserver.swift */,
 				3D72EF78246B0283000D3C0D /* MutableValue.swift */,
+				3D9CFFFD246C45A3000DDC78 /* BaseUIViewController+Lifecycle.swift */,
 			);
 			path = LifecycleCocoa;
 			sourceTree = "<group>";
@@ -238,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D72EF75246AFA42000D3C0D /* SpinLock.swift in Sources */,
-				3D72EF62246AF396000D3C0D /* UIViewController+Lifecycle.swift in Sources */,
 				3D72EF68246AF4AF000D3C0D /* Observer.swift in Sources */,
 				3D72EF6A246AF56B000D3C0D /* LifecycleOwner.swift in Sources */,
 				3D72EF77246AFBAB000D3C0D /* CallbackObserver.swift in Sources */,
@@ -248,6 +247,7 @@
 				3D72EF6C246AF584000D3C0D /* Lifecycle.swift in Sources */,
 				3D72EF73246AFA1F000D3C0D /* Lock.swift in Sources */,
 				3D72EF66246AF430000D3C0D /* Value.swift in Sources */,
+				3D9CFFFE246C45A3000DDC78 /* BaseUIViewController+Lifecycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
