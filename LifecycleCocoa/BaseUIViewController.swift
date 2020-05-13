@@ -11,34 +11,23 @@ import UIKit
 
 open class BaseUIViewController: UIViewController, LifecycleOwner {
   
-  var lifecycle: Lifecycle = .viewInit
+  internal var lifecycle: Lifecycle = .viewInit
+  
+  internal var lifecycleSelectors = Dictionary<Lifecycle, Array<Selector>>()
   
   public func lifecyle() -> Lifecycle {
     return lifecycle
   }
   
-  open override func viewDidLoad() {
-    super.viewDidLoad()
-    lifecycle = .viewDidLoad
+  open func setUp() {
+    /* called from setUp*/
   }
   
-  open override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    lifecycle = .viewWillAppear
+  open func attach(_ animated: Bool) {
+    /* called from attach */
   }
   
-  open override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    lifecycle = .viewDidAppear
-  }
-  
-  open override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
-    lifecycle = .viewWilDisappear
-  }
-  
-  open override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(animated)
-    lifecycle = .viewDidDisappear
+  open func detach(_ animated: Bool) {
+    /* called from detach */
   }
 }
