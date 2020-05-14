@@ -31,25 +31,71 @@ extension BaseUIViewController {
   @objc internal func didLoad() {
     self.didLoad()
     lifecycle = .viewDidLoad
+    dispatchDidLoadSelectors()
   }
   
   @objc internal func willAppear(_ animated: Bool) {
     self.willAppear(animated)
     lifecycle = .viewWillAppear
+    dispatchWillAppearSelectors(animated)
   }
   
   @objc internal func didAppear(_ animated: Bool) {
     self.didAppear(animated)
     lifecycle = .viewDidAppear
+    dispatchDidAppearSelectors(animated)
   }
   
   @objc internal func willDisappear(_ aniamted: Bool) {
     self.willDisappear(aniamted)
     lifecycle = .viewWilDisappear
+    dispatchDidDisappearSelectors(aniamted)
   }
   
   @objc internal func didDisappear(_ animated: Bool) {
     self.didDisappear(animated)
     lifecycle = .viewDidDisappear
+    dispatchDidDisappearSelectors(animated)
+  }
+  
+  // we do perform selectors in here this way
+  internal func dispatchDidLoadSelectors() {
+    if let selectors = lifecycleSelectors[.viewDidLoad] {
+      for selector in selectors {
+        self.perform(selector)
+      }
+    }
+  }
+  
+  internal func dispatchWillAppearSelectors(_ animated: Bool) {
+    if let selectors = lifecycleSelectors[.viewWillAppear] {
+      for selector in selectors {
+        self.perform(selector, with: animated)
+      }
+    }
+  }
+  
+  internal func dispatchDidAppearSelectors(_ animated: Bool) {
+    if let selectors = lifecycleSelectors[.viewDidAppear] {
+      for selector in selectors {
+        self.perform(selector, with: animated)
+      }
+    }
+  }
+  
+  internal func dispatchWillDisappearSelectors(_ animated: Bool) {
+    if let selectors = lifecycleSelectors[.viewWilDisappear] {
+      for selector in selectors {
+        self.perform(selector, with: animated)
+      }
+    }
+  }
+  
+  internal func dispatchDidDisappearSelectors(_ animated: Bool) {
+    if let selectors = lifecycleSelectors[.viewDidDisappear] {
+      for selector in selectors {
+        self.perform(selector, with: animated)
+      }
+    }
   }
 }
