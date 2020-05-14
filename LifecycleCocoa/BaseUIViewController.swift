@@ -21,6 +21,23 @@ open class BaseUIViewController: UIViewController, LifecycleOwner {
     return cache
   }()
   
+  /// You should call this method at #setUp() else it will not work adding .viewDidLoad lifecycle events
+  /// event it will broke your code sequence
+  public func register(_ lifecycle: Lifecycle, _ args: Selector...) {
+    if lifecycle >= .viewWillAppear {
+      var selectors: [Selector]
+      if var previous = lifecycleSelectors[lifecycle] {
+        previous.append(contentsOf: args)
+        selectors = previous
+      } else {
+        selectors = args
+      }
+      lifecycleSelectors[lifecycle] = selectors
+    } else {
+      fatalError("viewDidLoad is not supported you should register your methods in #setUp() after overriding it.")
+    }
+  }
+  
   public func lifecyle() -> Lifecycle {
     return lifecycle
   }
