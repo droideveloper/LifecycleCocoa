@@ -13,21 +13,27 @@ open class BaseUIViewController: UIViewController, LifecycleOwner {
   
   internal var lifecycle: Lifecycle = .viewInit
   
-  internal var lifecycleSelectors = Dictionary<Lifecycle, Array<Selector>>()
+  internal var lifecycleSelectors: Dictionary<Lifecycle, Array<Selector>> = {
+    var cache = [Lifecycle: [Selector]]()
+    cache[.viewDidLoad] = [#selector(setUp)]
+    cache[.viewWillAppear] = [#selector(attach(_:))]
+    cache[.viewWilDisappear] = [#selector(detach(_:))]
+    return cache
+  }()
   
   public func lifecyle() -> Lifecycle {
     return lifecycle
   }
   
-  open func setUp() {
+  @objc open func setUp() {
     /* called from setUp*/
   }
   
-  open func attach(_ animated: Bool) {
+  @objc open func attach(_ animated: Bool) {
     /* called from attach */
   }
   
-  open func detach(_ animated: Bool) {
+  @objc open func detach(_ animated: Bool) {
     /* called from detach */
   }
 }
