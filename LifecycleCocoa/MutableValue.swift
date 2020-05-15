@@ -10,7 +10,7 @@ import Foundation
 
 public class MutableValue<D>: Value<D> where D: Equatable {
   
-  override init(_ defaultValue: D) {
+  public override init(_ defaultValue: D) {
     super.init(defaultValue)
   }
   

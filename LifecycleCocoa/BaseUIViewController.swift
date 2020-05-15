@@ -14,7 +14,7 @@ open class BaseUIViewController: UIViewController, LifecycleOwner {
   internal var lifecycle: Lifecycle = .viewInit
   
   internal var lifecycleSelectors: Dictionary<Lifecycle, Array<Selector>> = {
-    var cache = [Lifecycle: [Selector]]()
+    var cache = Dictionary<Lifecycle, Array<Selector>>()
     cache[.viewDidLoad] = [#selector(setUp)]
     cache[.viewWillAppear] = [#selector(attach(_:))]
     cache[.viewWilDisappear] = [#selector(detach(_:))]
