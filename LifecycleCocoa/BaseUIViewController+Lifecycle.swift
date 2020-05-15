@@ -68,10 +68,14 @@ extension BaseUIViewController {
   }
   
   internal func dispatchWillAppearSelectors(_ animated: Bool) {
-    if let selectors = lifecycleSelectors[.viewWillAppear] {
-      for selector in selectors {
-        perform(selector, with: animated)
+    do {
+      if let selectors = lifecycleSelectors[.viewWillAppear] {
+        for selector in selectors {
+          perform(selector, with: animated)
+        }
       }
+    } catch let error {
+      print(error.localizedDescription)
     }
   }
   
