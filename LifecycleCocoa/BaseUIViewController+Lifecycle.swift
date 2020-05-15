@@ -11,7 +11,7 @@ import UIKit
 
 extension BaseUIViewController {
   
-  static func setup() {
+  public static func setup() {
     
     exchange(self, #selector(viewDidLoad), #selector(didLoad))
     exchange(self, #selector(viewWillAppear(_:)), #selector(willAppear(_:)))
