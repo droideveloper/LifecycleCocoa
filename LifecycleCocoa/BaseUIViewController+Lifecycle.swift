@@ -62,7 +62,7 @@ extension BaseUIViewController {
   internal func dispatchDidLoadSelectors() {
     if let selectors = lifecycleSelectors[.viewDidLoad] {
       for selector in selectors {
-        self.perform(selector)
+        perform(selector)
       }
     }
   }
@@ -70,7 +70,7 @@ extension BaseUIViewController {
   internal func dispatchWillAppearSelectors(_ animated: Bool) {
     if let selectors = lifecycleSelectors[.viewWillAppear] {
       for selector in selectors {
-        self.perform(selector, with: animated)
+        perform(selector, with: animated)
       }
     }
   }
@@ -78,7 +78,7 @@ extension BaseUIViewController {
   internal func dispatchDidAppearSelectors(_ animated: Bool) {
     if let selectors = lifecycleSelectors[.viewDidAppear] {
       for selector in selectors {
-        self.perform(selector, with: animated)
+        perform(selector, with: animated)
       }
     }
   }
@@ -86,7 +86,7 @@ extension BaseUIViewController {
   internal func dispatchWillDisappearSelectors(_ animated: Bool) {
     if let selectors = lifecycleSelectors[.viewWilDisappear] {
       for selector in selectors {
-        self.perform(selector, with: animated)
+        perform(selector, with: animated)
       }
     }
   }
@@ -94,7 +94,7 @@ extension BaseUIViewController {
   internal func dispatchDidDisappearSelectors(_ animated: Bool) {
     if let selectors = lifecycleSelectors[.viewDidDisappear] {
       for selector in selectors {
-        self.perform(selector, with: animated)
+        perform(selector, with: animated)
       }
     }
   }
