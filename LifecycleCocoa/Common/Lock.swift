@@ -1,5 +1,5 @@
 //
-//  UIViewController+Lifecycle.swift
+//  Lock.swift
 //  LifecycleCocoa
 //
 //  Created by Fatih Sen on 12.05.2020.
@@ -7,10 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-extension UIViewController {
-  
-  
-  
+protocol Lock {
+  func hold()
+  func release()
 }
