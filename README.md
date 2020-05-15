@@ -1,4 +1,4 @@
-# Lifecycle
+# Lifecycle (1.0.0-alpha)
 
 Lifecycle Cocoa is a helper library that will observe values on ```Value<T>``` or ```MutableValue<T>``` which is as named mutable version of first one, and another feature of this is when you use ```BaseUIViewController``` you can register callback Selectors for proper lifecycle concept it will called on expected lifecycle method.
 
@@ -10,6 +10,12 @@ You can create your own type of Mutable type of Value by simple extending it.
 ### Tech
 
 Lifecycle Cocoa uses method exchange if you know about it, it will replace proper lifecycle methods into defined ones and call original functions super. (aka swizzle)
+
+### Install
+
+```pod
+    pod "LifecycleCocoa", :git => "https://github.com/droideveloper/LifecycleCocoa.git", :branch => "release/1.0.0-alpha"
+```
 
 ### How to use
 
