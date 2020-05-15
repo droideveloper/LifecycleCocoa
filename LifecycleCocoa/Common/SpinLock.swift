@@ -13,10 +13,14 @@ class SpinLock: Lock {
   private var obj = os_unfair_lock_s()
   
   func hold() {
-    os_unfair_lock_lock(&obj)
+    if #available(iOS 10.0, *) {
+      os_unfair_lock_lock(&obj)
+    }
   }
   
   func release() {
-    os_unfair_lock_unlock(&obj)
+    if #available(iOS 10.0, *) {
+      os_unfair_lock_unlock(&obj)
+    }
   }
 }
