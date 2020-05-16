@@ -1,6 +1,6 @@
 # Lifecycle (1.0.0-alpha)
 
-Lifecycle Cocoa is a helper library that will observe values on ```Value<T>``` or ```MutableValue<T>``` which is as named mutable version of first one, and another feature of this is when you use ```BaseUIViewController``` you can register callback Selectors for proper lifecycle concept it will called on expected lifecycle method.
+Lifecycle Cocoa is a helper library that will observe values on ```Value<T>``` or ```MutableValue<T>``` which is as named mutable version of first one, and another feature of this is when you use ```AbstractViewController``` you can register callback Selectors for proper lifecycle concept it will called on expected lifecycle method.
 
   - Observe Values bound to change in future
   - Define proper functions or selectors for lifecycle (sequencial at the moment)
