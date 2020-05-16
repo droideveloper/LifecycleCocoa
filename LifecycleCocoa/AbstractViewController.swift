@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-open class BaseUIViewController: UIViewController, LifecycleOwner {
+open class AbstractViewController: UIViewController, LifecycleOwner {
   
   internal var lifecycle: Lifecycle = .viewInit
   
