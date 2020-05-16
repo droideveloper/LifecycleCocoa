@@ -21,12 +21,12 @@ Lifecycle Cocoa uses method exchange if you know about it, it will replace prope
 
 in your AppDelegate implementation.
 ```swift
-BaseUIViewController.setup()
+AbstractViewController.setup()
 ````
-then implement your controllers from BaseUIViewController
+then implement your controllers from AbstractViewController
 ```swift
 
-class SomeController: BaseUIViewController {
+class SomeController: AbstractViewController {
     
     // called when viewDidLoad lifecycle event occur
     @objc override func setUp() {
