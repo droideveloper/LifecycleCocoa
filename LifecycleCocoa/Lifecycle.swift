@@ -10,6 +10,7 @@ import Foundation
 
 public enum Lifecycle: Int, Comparable {
   case viewInit// for sanity check
+  case viewDidLayoutSubviews // will use it and it will only used for layout subviews
   case viewDidLoad// create
   case viewWillAppear// start
   case viewDidAppear// resume
